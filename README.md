@@ -1,4 +1,4 @@
-# (b4sic) Local Development
+# (b4s1c) Local Development
 
 
 You need [nodejs](https://nodejs.org/en/) to play :+1:
