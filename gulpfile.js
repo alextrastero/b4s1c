@@ -12,16 +12,19 @@ gulp.task('sass', function() {
     .pipe(sass())
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('.'))
-    .pipe(livereload());  
+    .pipe(livereload());
 });
+
 gulp.task('watch', function() {
   livereload.listen();
   gulp.watch('*.scss', ['sass']);
 });
+
 gulp.task('express', function() {
   var express = require('express');
   var app = express();
   app.use(express.static(__dirname));
   app.listen(3000);
 });
+
 gulp.task('default', ['watch', 'sass', 'express']);
